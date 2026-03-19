@@ -39,4 +39,4 @@ print(lancer_d20())
 def formater_des(nb_des, nb_faces):
     return f"{nb_des}d{nb_faces}"
  
- 
+   
