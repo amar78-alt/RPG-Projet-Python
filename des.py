@@ -34,7 +34,6 @@ def lancer_d20(nb_des=1):
     return lancer_des(nb_des, 20)
 
 
-print(lancer_d20())
 
 def formater_des(nb_des, nb_faces):
     return f"{nb_des}d{nb_faces}"
