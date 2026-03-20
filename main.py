@@ -165,6 +165,14 @@ def executer_action(participant, action_type, cible):
 
     elif action_type == "poison":
         Poison(participant, cible).executer()
+#=========FONCTIONNALITE SUPPLEMENTAIRE=====================
+
+def evenement_mort_subite(joueurs):
+    import random
+    if random.randint(1, 10) == 1:
+        cible = random.choice([j for j in joueurs if j.est_vivante()])
+        print("\n💀 Un KDO empoisonné tombe sur", cible.nom, "!")
+        cible.subir_degats(50)
 
 
 # =========================
@@ -180,6 +188,8 @@ def jouer_combat():
 
     while True:
         print(f"\n TOUR {tour} ")
+        
+        evenement_mort_subite(joueurs)
 
         for perso in ordre:
 
